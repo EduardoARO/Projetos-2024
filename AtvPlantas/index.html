@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Plantas</title>
+    <link rel="stylesheet" href="style.css">
+
+<script>
+function validarFormulario() {
+    var nome = document.forms["cadastroPlanta"]["nome"].value;
+    var especie = document.forms["cadastroPlanta"]["especie"].value;
+    var alturaMaxima = document.forms["cadastroPlanta"]["alturaMaxima"].value;
+
+    if (nome === "" || especie === "" || alturaMaxima === "") {
+        alert("Todos os campos são obrigatórios!");
+        return false;
+    } else {
+        alert("Planta cadastrada com sucesso");
+        return true;
+    }
+}
+</script>
+
+</head>
+<body>
+
+<form name="cadastroPlanta" id="form-cadastro" onsubmit="return validarFormulario()">
+    <h2>Cadastro de Plantas</h2>
+<div class="linha">
+        <label for="nome">Nome da planta:</label>
+    <input type="text" id="nome" name="nome">
+</div>
+
+ <div class="linha">
+    <label for="especie">Espécie:</label>
+    <input type="text" id="especie" name="especie">
+ </div>
+<div class="linha">
+    <label for="alturaMaxima">Altura máxima:</label>
+    <input type="text" id="alturaMaxima" name="alturaMaxima">    
+</div>
+    <input type="submit" value="Cadastrar">
+</form>
+
+</body>
+</html>
